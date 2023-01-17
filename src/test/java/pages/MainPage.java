@@ -31,6 +31,7 @@ public class MainPage extends SearchPage {
     @Step("Открываем каталог в нижнем Меню")
     public CatalogPage openCatalog() {
         catalogButton.should(Condition.visible).click();
+
         return new CatalogPage();
     }
 
