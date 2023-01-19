@@ -6,8 +6,8 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-def allureVersion = "2.19.0",
-    junitVersion = "5.8.2",
+def allureVersion = "2.12.1",
+    junitVersion = "5.7.0",
     slf4jVersion = "1.7.32"
 
 repositories {

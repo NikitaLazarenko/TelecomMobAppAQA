@@ -64,7 +64,6 @@ public class MainMenuTests extends BaseTest {
         adm.authorizationMP().CheckBody();
         adm.authorizationMP().AuthItself();
         adm.authorizationMP().PinSetting();
-
     }
 
 }
