@@ -2,6 +2,7 @@ package tests;
 
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -58,12 +59,14 @@ public class MainMenuTests extends BaseTest {
 //    }
 
     @Test
-    @Description("Авторизация")
+    @DisplayName ("Авторизация")
     public void AuthorizationMP(){
         Adm adm = new Adm();
         adm.authorizationMP().CheckBody();
         adm.authorizationMP().AuthItself();
         adm.authorizationMP().PinSetting();
     }
+
+
 
 }
