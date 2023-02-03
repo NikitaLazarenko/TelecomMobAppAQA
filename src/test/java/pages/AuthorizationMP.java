@@ -14,10 +14,14 @@ import java.util.List;
 
 import io.appium.java_client.MobileBy;
 import io.qameta.allure.Step;
+import org.openqa.selenium.interactions.Actions;
 
 public class AuthorizationMP extends SearchPage{
     public void CheckBody(){
         routeToTheAuth();
+        AuthItself();
+        PinSetting();
+        LogOutAuthZone();
     }
 
     //Локаторы к каждому элементу:
@@ -30,7 +34,9 @@ public class AuthorizationMP extends SearchPage{
             "idget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.LinearLayout[2]/android.view.ViewGroup/android.widget.LinearLayout"));
     public SelenideElement Button1ForPinCode = $(MobileBy.id("kz.telecom.app:id/pinDigit1"));
     public SelenideElement PayButtonAccessible = $(MobileBy.className("android.widget.TextView"));
-
+    public SelenideElement ElseButtonMainMenu = $(MobileBy.xpath("//android.widget.FrameLayout[@content-desc=\"Еще\"]/android.widget.ImageView"));
+    public SelenideElement LogOutFromAccount = $(MobileBy.id("kz.telecom.app:id/btn"));
+    public SelenideElement LogOutAgree = $(MobileBy.id("kz.telecom.app:id/btn_main"));
 
     @Step("Переход на страницу авторизации")
     public void routeToTheAuth() {
@@ -54,7 +60,7 @@ public class AuthorizationMP extends SearchPage{
 //        sleep(3000);
     }
 
-    @Step("Ввод пинкода и открытие неавторизованной зоны")
+    @Step("Ввод пинкода и открытие авторизованной зоны")
     public void PinSetting() {
         Button1ForPinCode.click();
         sleep(500);
@@ -75,6 +81,15 @@ public class AuthorizationMP extends SearchPage{
         sleep(1000);
 
         PayButtonAccessible.shouldBe(Condition.visible);
+    }
+
+    @Step("Логаут")
+    public void LogOutAuthZone() {
+        ElseButtonMainMenu.click();
+        androidScrollToAnElementByText("Выйти из аккаунта");
+        LogOutAgree.click();
+        LoginButtonMainPage.click();
+        PhoneField.shouldBe(Condition.visible);
     }
 
 }
