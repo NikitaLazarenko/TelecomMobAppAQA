@@ -44,7 +44,7 @@ public class AuthorizationMP extends SearchPage{
     public void AuthItself() {
         PhoneField.click();
 //        sleep(1000);
-        PhoneField.sendKeys("7751494255");
+        PhoneField.sendKeys("7470370275");
         ContinueButtonAuth.click();
         PasswordField.click();
 //        sleep(1000);

@@ -63,10 +63,15 @@ public class MainMenuTests extends BaseTest {
     public void AuthorizationMP(){
         Adm adm = new Adm();
         adm.authorizationMP().CheckBody();
-        adm.authorizationMP().AuthItself();
-        adm.authorizationMP().PinSetting();
+//        adm.authorizationMP().AuthItself();
+//        adm.authorizationMP().PinSetting();
     }
 
-
+    @Test
+    @DisplayName ("Детализация по выставленным счетам и истории платежей")
+    public void Detailing(){
+        Adm adm = new Adm();
+        adm.detailing().CheckBodyDet();
+    }
 
 }

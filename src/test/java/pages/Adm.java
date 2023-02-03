@@ -7,7 +7,10 @@ public AuthorizationMP authorizationMP(){
     return authorizationMP;
 }
 
-
+public Detailing detailing() {
+    Detailing detailing = new Detailing();
+    return detailing;
+}
 
 
 }
