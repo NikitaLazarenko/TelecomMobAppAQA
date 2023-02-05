@@ -50,7 +50,6 @@ public class Detailing extends SearchPage{
     public SelenideElement BackFromPDF = $(MobileBy.id("kz.telecom.app:id/ic_back"));
     public SelenideElement PaymentsHistory = $(MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"История платежей\"]"));
 
-
     @Step("Переход на страницу авторизации")
     public void routeToTheAuth() {
         closePopUpButtonDet.click();

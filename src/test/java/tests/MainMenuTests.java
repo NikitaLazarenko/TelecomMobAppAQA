@@ -1,6 +1,7 @@
 package tests;
 
 
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -73,5 +74,20 @@ public class MainMenuTests extends BaseTest {
         Adm adm = new Adm();
         adm.detailing().CheckBodyDet();
     }
+
+    @Test
+    @DisplayName ("Корректная загрузка / отображения неавторизованной зоны")
+    public void UnauthorizedZoneCheck(){
+        Adm adm = new Adm();
+        adm.unauthorizedZoneCheck().CheckBody();
+    }
+
+    @Test
+    @DisplayName("Корректная загрузка / отображения авторизованной зоны")
+    public void AuthorizedZoneCheck(){
+        Adm adm = new Adm();
+        adm.authorizedZoneCheck().CheckBody();
+    }
+
 
 }

@@ -12,5 +12,15 @@ public Detailing detailing() {
     return detailing;
 }
 
+public UnauthorizedZoneCheck unauthorizedZoneCheck() {
+    UnauthorizedZoneCheck unauthorizedZoneCheck = new UnauthorizedZoneCheck();
+    return unauthorizedZoneCheck;
+}
+
+public AuthorizedZoneCheck authorizedZoneCheck() {
+    AuthorizedZoneCheck authorizedZoneCheck = new AuthorizedZoneCheck();
+    return authorizedZoneCheck;
+}
+
 
 }
