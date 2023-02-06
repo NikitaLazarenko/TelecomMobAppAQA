@@ -69,14 +69,14 @@ public class MainMenuTests extends BaseTest {
     }
 
     @Test
-    @DisplayName ("Детализация по выставленным счетам и истории платежей")
+    @DisplayName("Детализация по выставленным счетам и истории платежей")
     public void Detailing(){
         Adm adm = new Adm();
         adm.detailing().CheckBodyDet();
     }
 
     @Test
-    @DisplayName ("Корректная загрузка / отображения неавторизованной зоны")
+    @DisplayName("Корректная загрузка / отображения неавторизованной зоны")
     public void UnauthorizedZoneCheck(){
         Adm adm = new Adm();
         adm.unauthorizedZoneCheck().CheckBody();
@@ -88,6 +88,15 @@ public class MainMenuTests extends BaseTest {
         Adm adm = new Adm();
         adm.authorizedZoneCheck().CheckBody();
     }
+
+    @Test
+    @DisplayName("Онбординг")
+    public void OnboardingMP(){
+        Adm adm = new Adm();
+        adm.onboardingMP().CheckBody();
+
+    }
+
 
 
 }

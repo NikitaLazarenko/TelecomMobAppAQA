@@ -62,7 +62,7 @@ public class Detailing extends SearchPage{
     public void AuthItself() {
         PhoneFieldDet.click();
 //        sleep(1000);
-        PhoneFieldDet.sendKeys("7751494255");
+        PhoneFieldDet.sendKeys("7476993790");
         ContinueButtonAuthDet.click();
         PasswordFieldDet.click();
 //        sleep(1000);

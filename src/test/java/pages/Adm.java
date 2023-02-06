@@ -22,5 +22,10 @@ public AuthorizedZoneCheck authorizedZoneCheck() {
     return authorizedZoneCheck;
 }
 
+public OnboardingMP onboardingMP(){
+    OnboardingMP onboardingMP = new OnboardingMP();
+    return onboardingMP;
+}
+
 
 }
