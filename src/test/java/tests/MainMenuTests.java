@@ -110,5 +110,19 @@ public class MainMenuTests extends BaseTest {
         adm.paymentMP().CheckBody();
     }
 
+    @Test
+    @DisplayName("Проверка раздела 'Мои услуги'")
+    public void MyServicesMP(){
+        Adm adm = new Adm();
+        adm.myServicesMP().CheckBody();
+    }
+
+    @Test
+    @DisplayName("Проверка раздела 'О приложении'")
+    public void AboutAppMP(){
+        Adm adm = new Adm();
+        adm.aboutAppMP().CheckBody();
+    }
+
 
 }

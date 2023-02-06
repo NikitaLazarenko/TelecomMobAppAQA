@@ -37,5 +37,15 @@ public PaymentMP paymentMP(){
     return paymentMP;
 }
 
+public MyServicesMP myServicesMP(){
+    MyServicesMP myServicesMP = new MyServicesMP();
+    return myServicesMP;
+}
+
+public AboutAppMP aboutAppMP(){
+    AboutAppMP aboutAppMP = new AboutAppMP();
+    return aboutAppMP;
+}
+
 
 }
