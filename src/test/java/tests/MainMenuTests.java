@@ -94,9 +94,13 @@ public class MainMenuTests extends BaseTest {
     public void OnboardingMP(){
         Adm adm = new Adm();
         adm.onboardingMP().CheckBody();
-
     }
 
-
+    @Test
+    @DisplayName("Подключение услуги на новый адрес (кейс: одна услуга)")
+    public void ConnectingServiceToANewAddress(){
+        Adm adm = new Adm();
+        adm.connectingServiceToANewAddress().CheckBody();
+    }
 
 }

@@ -27,5 +27,9 @@ public OnboardingMP onboardingMP(){
     return onboardingMP;
 }
 
+public ConnectingServiceToANewAddress connectingServiceToANewAddress(){
+    ConnectingServiceToANewAddress connectingServiceToANewAddress = new ConnectingServiceToANewAddress();
+    return connectingServiceToANewAddress;
+}
 
 }

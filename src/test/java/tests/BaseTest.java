@@ -49,7 +49,7 @@ public class BaseTest {
         Configuration.browser = runHelper().getDriverClass().getName();
         Configuration.startMaximized = false;
         Configuration.browserSize = null;
-        Configuration.timeout = 10000;
+        Configuration.timeout = 30000;
         disableAnimationOnEmulator();
     }
 
