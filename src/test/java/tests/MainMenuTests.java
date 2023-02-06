@@ -138,5 +138,13 @@ public class MainMenuTests extends BaseTest {
         adm.switchBetweenLsMP().CheckBody();
     }
 
+    @Test
+    @DisplayName("Восстановление пароля")
+    public void PasswordRecoveryMP(){
+        Adm adm = new Adm();
+        adm.passwordRecoveryMP().CheckBody();
+    }
+
+
 
 }

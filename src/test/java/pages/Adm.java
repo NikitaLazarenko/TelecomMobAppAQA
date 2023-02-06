@@ -57,5 +57,10 @@ public SwitchBetweenLsMP switchBetweenLsMP(){
     return switchBetweenLsMP;
 }
 
+public PasswordRecoveryMP passwordRecoveryMP(){
+    PasswordRecoveryMP passwordRecoveryMP = new PasswordRecoveryMP();
+    return passwordRecoveryMP;
+}
+
 
 }
