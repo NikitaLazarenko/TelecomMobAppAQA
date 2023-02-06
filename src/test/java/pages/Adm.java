@@ -52,5 +52,10 @@ public CreatingAppealsMP creatingAppealsMP(){
     return creatingAppealsMP;
 }
 
+public SwitchBetweenLsMP switchBetweenLsMP(){
+    SwitchBetweenLsMP switchBetweenLsMP = new SwitchBetweenLsMP();
+    return switchBetweenLsMP;
+}
+
 
 }

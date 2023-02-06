@@ -131,5 +131,12 @@ public class MainMenuTests extends BaseTest {
         adm.creatingAppealsMP().CheckBody();
     }
 
+    @Test
+    @DisplayName("Переключение между лицевыми счетами")
+    public void SwitchBetweenLsMP(){
+        Adm adm = new Adm();
+        adm.switchBetweenLsMP().CheckBody();
+    }
+
 
 }
