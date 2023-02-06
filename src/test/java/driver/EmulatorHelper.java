@@ -1,8 +1,11 @@
 package driver;
 
 import com.codeborne.selenide.SelenideElement;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Класс помощник для Page страниц
@@ -44,5 +47,13 @@ public class EmulatorHelper extends EmulatorDriver{
         element.sendKeys(text);
         driver.pressKey(new KeyEvent(AndroidKey.ENTER));
     }
+
+//    public static void main(String[] args) throws Exception {
+//        AppiumDriver driver = AppiumJavaPractice.initializeDriver();
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
+//    }
+
+
+
 
 }

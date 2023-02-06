@@ -32,4 +32,10 @@ public ConnectingServiceToANewAddress connectingServiceToANewAddress(){
     return connectingServiceToANewAddress;
 }
 
+public PaymentMP paymentMP(){
+    PaymentMP paymentMP = new PaymentMP();
+    return paymentMP;
+}
+
+
 }

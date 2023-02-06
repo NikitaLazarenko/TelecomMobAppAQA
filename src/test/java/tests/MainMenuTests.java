@@ -103,4 +103,12 @@ public class MainMenuTests extends BaseTest {
         adm.connectingServiceToANewAddress().CheckBody();
     }
 
+    @Test
+    @DisplayName("Оплата KtPay")
+    public void PaymentMP(){
+        Adm adm = new Adm();
+        adm.paymentMP().CheckBody();
+    }
+
+
 }
