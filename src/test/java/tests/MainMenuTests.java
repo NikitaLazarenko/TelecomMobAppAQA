@@ -124,5 +124,12 @@ public class MainMenuTests extends BaseTest {
         adm.aboutAppMP().CheckBody();
     }
 
+    @Test
+    @DisplayName("Проверка создания обращений")
+    public void CreatingAppealsMP(){
+        Adm adm = new Adm();
+        adm.creatingAppealsMP().CheckBody();
+    }
+
 
 }

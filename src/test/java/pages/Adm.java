@@ -47,5 +47,10 @@ public AboutAppMP aboutAppMP(){
     return aboutAppMP;
 }
 
+public CreatingAppealsMP creatingAppealsMP(){
+    CreatingAppealsMP creatingAppealsMP = new CreatingAppealsMP();
+    return creatingAppealsMP;
+}
+
 
 }
