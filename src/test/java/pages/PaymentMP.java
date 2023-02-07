@@ -52,12 +52,6 @@ public class PaymentMP extends SearchPage {
     public SelenideElement TitleVisible = $(MobileBy.xpath("kz.telecom.app:id/title"));
 
 
-
-
-
-
-
-
     @Step("Переход на страницу авторизации")
     public void routeToTheAuth() {
         closePopUpButton.click();
@@ -106,6 +100,7 @@ public class PaymentMP extends SearchPage {
     @Step("Открытие окна KTPay")
     public void TransitionToKTPAY() {
         PayButton.click();
+        PaymentField.clear();
         PaymentField.sendKeys("100");
         ContinuePayment.click();
         WebViewVisible.shouldBe(Condition.visible);
