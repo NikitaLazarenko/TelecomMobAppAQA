@@ -1,16 +1,29 @@
 package pages;
 
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byClassName;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 import static driver.EmulatorHelper.androidScrollToAnElementByText;
 import static driver.EmulatorHelper.goBack;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.io.IOException;
+
+
+
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-
 import java.util.List;
+
 
 import com.codeborne.selenide.conditions.Visible;
 import io.appium.java_client.MobileBy;
@@ -59,9 +72,13 @@ public class AboutAppMP extends SearchPage {
         ElseButton.click();
         AboutAppB.click();
         AppVersion.click();
-        VersionItself.shouldBe(Condition.visible);
-        Date.shouldBe(Condition.visible);
-        Description.shouldBe(Condition.visible);
+        VersionItself.shouldBe(visible);
+        Date.shouldBe(visible);
+//        Description.shouldBe(visible).getSize();
+        if ($$(byXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout/android.widget.TextView")).filter(visible).size() < 1) {
+            Assertions.fail("Описание новой сборки не заполнено");
+        }
+
         goBack();
         goBack();
     }
