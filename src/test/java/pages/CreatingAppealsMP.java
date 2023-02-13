@@ -16,7 +16,7 @@ import io.appium.java_client.MobileBy;
 import io.qameta.allure.Step;
 import org.openqa.selenium.interactions.Actions;
 
-public class CreatingAppealsMP extends SearchPage {
+public class CreatingAppealsMP{
     public void CheckBody() {
         routeToTheAuth();
         AuthItself();

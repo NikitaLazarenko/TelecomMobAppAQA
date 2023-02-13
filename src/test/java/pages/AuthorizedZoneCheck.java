@@ -18,7 +18,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Sleeper;
 
-public class AuthorizedZoneCheck extends SearchPage{
+public class AuthorizedZoneCheck{
     public void CheckBody(){
         routeToTheAuth();
         AuthItself();

@@ -15,7 +15,7 @@ import java.util.List;
 import io.appium.java_client.MobileBy;
 import io.qameta.allure.Step;
 
-public class Detailing extends SearchPage{
+public class Detailing{
     public void CheckBodyDet(){
         routeToTheAuth();
         AuthItself();

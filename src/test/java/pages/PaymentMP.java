@@ -16,7 +16,7 @@ import io.appium.java_client.MobileBy;
 import io.qameta.allure.Step;
 import org.openqa.selenium.interactions.Actions;
 
-public class PaymentMP extends SearchPage {
+public class PaymentMP{
     public void CheckBody() {
         routeToTheAuth();
         AuthItself();
