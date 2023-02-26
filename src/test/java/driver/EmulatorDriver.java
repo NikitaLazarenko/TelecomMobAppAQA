@@ -7,6 +7,7 @@ import helper.ApkInfoHelper;
 import io.appium.java_client.android.AndroidDriver;
 
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -30,6 +31,8 @@ public class EmulatorDriver implements WebDriverProvider {
     private static String APP_ACTIVITY = ConfigReader.emulatorConfig.appActivity();
     private static final String APP = ConfigReader.emulatorConfig.app();
     private static final String URL = ConfigReader.emulatorConfig.remoteURL();
+    private static String NO_RESET = ConfigReader.emulatorConfig.noReset();
+    private static String FULL_RESET = ConfigReader.emulatorConfig.fullReset();
 
     /**
      * Валидация URL ссылки из пропертей
@@ -82,7 +85,14 @@ public class EmulatorDriver implements WebDriverProvider {
         desiredCapabilities.setCapability("appPackage", APP_PACKAGE);
         desiredCapabilities.setCapability("appActivity", APP_ACTIVITY);
 
+        desiredCapabilities.setCapability("noReset", "false");
+        desiredCapabilities.setCapability("fullReset", "true");
+        desiredCapabilities.setCapability(NO_RESET, "false");
+        desiredCapabilities.setCapability(FULL_RESET, "true");
+
         desiredCapabilities.setCapability("app", getAbsolutePath(APP));
+
+
          driver = new AndroidDriver<>(getUrl(), desiredCapabilities);
          return driver;
     }

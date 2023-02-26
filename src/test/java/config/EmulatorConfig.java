@@ -30,4 +30,10 @@ public interface EmulatorConfig extends Config {
 
     @Key("remoteURL")
     String remoteURL();
+
+    @Key("noReset")
+    String noReset();
+
+    @Key("fullReset")
+    String fullReset();
 }
