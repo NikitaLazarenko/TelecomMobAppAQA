@@ -50,7 +50,7 @@ public class PasswordRecoveryMP{
     public void AuthItself() {
         PhoneField.click();
 //        sleep(1000);
-        PhoneField.sendKeys("7784673885");
+        PhoneField.sendKeys("7051551222");
         ContinueButtonAuth.click();
         sleep(3000);
         RestorePasswordButton.click();
